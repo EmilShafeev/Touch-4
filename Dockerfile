@@ -8,6 +8,10 @@ RUN npm i
 
 COPY . .
 
-EXPOSE 3000
+ENV PORT 3000
+
+EXPOSE ${PORT}
+
+VOLUME [ "/app/data" ]
 
 CMD [ "node", "app.js" ]
